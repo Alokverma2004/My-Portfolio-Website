@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.webpage{
+    height: 100vh;  
+}
+
+/* CSS for Index and Home page*/
+.page{
+    background-image: url("Images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70vh;
+    width: 70vw;
+    margin: 12vh 18vw 12vh 10vw;
+    padding: 1vh 6vw 1vh 1vw;
+    border-radius: 30px;
+}
+.indexheading1{
+    font-size: 5.8vh;
+    font-weight: 800;
+    font-family:cursive;
+    color: white;
+}
+.indexheading2{
+    font-size: 4vh;
+    font-weight: 800;
+    font-family:cursive;
+    color: white;
+}
+.indexheading3{
+    font-size: 3vh;
+    font-weight: 800;
+    font-family:cursive;
+    color: white;
+}
+.indexpara{
+    font-size: 2.5vh;
+    font-weight: 600;
+    font-family:cursive;
+    color: white;
+}
+.cv{
+    width: 130px;
+    margin: 2vh 0px;
+    padding: 8px;
+    border: 1px solid rgb(7, 0, 0);
+    border-radius: 10px;
+    font-size: 2.5vh;
+    color: white;
+    background-color: rgb(70, 82, 142);
+}
+.cv:hover{
+    background-color: rgb(216, 215, 215);
+    color: black;
+    cursor: pointer;
+}
+
+/* CSS for Sidebar */
+.sidebar{
+    background-color: rgb(0 106 154);
+    height: 100vh;
+    padding: 0 2vh;
+    border-right: 1px solid black;
+}
+.center{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+}
+ul{
+    list-style: none; 
+}
+.checkinput{
+    height: 2vh;
+}
+.top{
+    padding: 4vh 0vh;
+}
+.left{
+    color: rgb(255, 255, 255);
+    padding: 0vh 0vh 0vh 3vh;
+}
+.inout{
+    position: absolute;
+    height: 6.5vh;
+    width: 6.5vh;
+    cursor: pointer;
+}
+.controlsidebar{
+    margin-top: 85vh;
+    margin-left: 1vh;
+}
+.sidebarGo{
+    transform: translate(-110px, 0px);
+    position: absolute;
+}
+.port{
+    height: 6.5vh;
+    width: 6.5vh;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: rgb(185, 186, 188);
+}
+.home, .about, .blog, .contact{
+    height: 6.5vh;
+    width: 6.5vh;
+    padding: 2vh;
+}
+
+
+/* CSS for Contact and Blog page */
+.pagecontact{
+    background-color: rgb(102 155 178);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.contactdetail{
+    display: grid;
+    grid-template-columns: repeat(2, 42vw);
+}
+.mycontact{
+    margin: 5vh;
+    padding-left: 5vw;
+}
+.comment{
+    margin: 3vh;
+    padding-left: 5vw;
+}
+.messageinput{
+    height: 10vh;
+    padding: 1vh;
+    font-size: 2.7vh;
+    background-color: rgb(144, 180, 196);
+    border: 2px solid;
+    border-radius: 10px;  
+    font-family: cursive; 
+}
+.nameinput, .phoneinput, .emailinput{
+    padding: 1vh;
+    font-size: 2.7vh;
+    background-color: rgb(144, 180, 196);
+    border: 2px solid;
+    border-radius: 10px;   
+    font-family: cursive;
+}
+.formlabel{
+    font-size: 3vh;
+    font-weight: 600;
+    line-height: 5vh;
+    font-family: cursive;
+}
+.submitbtn{
+    margin: 8px;
+    padding: 1vh;
+    font-size: 2.7vh;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(77, 49, 160);
+    border: 1px solid black;
+    border-radius:15px;
+    font-family: cursive;
+}
+.submitbtn:hover{
+    background-color: white;
+    color: rgb(49, 52, 214);
+    cursor: pointer;
+}
+.formtext{
+    font-size: 2.1vh;
+    margin: 1vh;
+    font-family: cursive;
+}
+.linkedin,.instagram, .twitter, .emailid, .phoneno, .github{
+    height: 4.5vh;
+    width: 4.5vh;
+    padding: 2vh;
+}
+.ulcontact{
+    display: flex;
+    padding: 3vh 0vh;
+}
+.myemail, .myphone{
+    display: flex;
+    align-items: center;
+    font-size: 2.5vh;
+    font-family: cursive;
+    padding: 2vh 0vh;
+    font-weight: 700;
+}
+.myemail a, .myphone a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#respo{
+    font-family: cursive;
+    color: blue;
+    margin-left: 10px;
+}
+
+
+/* CSS for Profile page */
+.profilecontent{
+    padding: 0vh 3vh 0vh 5vh;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.aboutme{
+    margin: 4vh;
+    padding: 1.5vh;
+    border-radius: 30px;
+}
+.profilepage{
+    background-color: rgb(177 201 237);
+    height: 100vh;
+    display: flex; 
+}
+.profileheading1{
+    font-size: 4.5vh;
+    font-family:cursive;
+}
+.profileheading2{
+    font-size: 3.5vh;
+    font-family:cursive;
+    margin: 2vh 0vh;
+}
+.profilepara{
+    font-size: 2.5vh;
+    font-family:cursive;
+}
+.myskill{
+    margin: 4vh;
+    padding: 1.5vh;
+    border-radius: 30px;
+}
+.skillheading1{
+    font-size: 4.5vh;
+    font-family:cursive;
+    margin: 30px 5px;
+}
+.skillpara{
+    font-size: 2.5vh;
+    font-family:cursive;
+}
+.imageskill{
+    height: 5.5vh;
+    width: 5.5vh;
+    margin: 1.5vh;
+    padding: .8vh;
+    border: 3px solid ;
+    border-radius: 50px;
+}
+.python, .cplusplus, .css, .html, .js{
+    display: flex;
+    border: 3px solid;
+    width: 400px;
+    height: 20px;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.pythonli, .jsli, .cssli, .htmlli, .cplusplusli{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.pythonexp, .cplusplusexp,.cssexp, .htmlexp, .jsexp{
+    height: 12px;
+    margin-left: 3px;
+    background-color: rgb(8, 14, 95);
+    border-radius: 10px;
+}
+.pythonexp{
+    width: 300px;  
+}
+.cplusplusexp{
+    width: 140px;
+}
+.cssexp{
+    width: 150px;
+}
+.htmlexp{
+    width: 330px;
+}
+.jsexp{
+    width: 160px;
+}

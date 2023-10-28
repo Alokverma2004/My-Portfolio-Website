@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="webpage">
+        <div class="pagecontact">
+            <div class="sidebar">
+                <ul>
+                    <li class="top"><img class="port" src="Images/port.png" alt="Network error"><a class="left" href="#port"></a></li>
+                    <div class="center">
+                        <li class="bottom"><a href="home.html"><img class="home" src="Images/home.png" alt="Network error"></a></li>
+                        <li class="bottom"><a href="profile.html"><img class="about" src="Images/about.png" alt="Network error"></a></li>
+                        <li class="bottom"><a href="contact.html"><img class="contact" src="Images/contact.png" alt="Network error"></a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="controlsidebar">
+                <img src="Images/inout.png" alt="Network error" class="inout">
+            </div>
+            <div class="contactdetail">
+                <div class="mycontact">
+                    <h1>Feel free to Contact Me</h1>
+                    <div class="myemail"><img class="emailid" src="Images/email.png" alt="Network error"><a
+                            href="">alokverma4237@gmail.com</a> </div>
+                    <div class="myphone"><img class="phoneno" src="Images/phone.png" alt="Network error"><a
+                            href="">7408092857</a></div>
+                    <!-- <h1>Check out my Social Media Handles</h1> -->
+                    <ul class="ulcontact">
+                        <li class="row"><a href="https://www.linkedin.com/in/alok-verma-3099b1264/"><img
+                                    class="linkedin" src="Images/linkedin.png" alt="Network error"></a></li>
+                        <li class="row"><a href="https://www.instagram.com/alok___verma_____/"><img class="instagram"
+                                    src="Images/instagram.png" alt="Network error"></a></li>
+                        <li class="row"><a href="https://twitter.com/Alokver44502497"><img class="twitter"
+                                    src="Images/twitter.png" alt="Network error"></a></li>
+                        <li class="row"><a href="https://github.com/Alokverma2004"><img class="github" src="Images/github.png"
+                                    alt="Network error"></a></li>
+                    </ul>
+                </div>
+                <div class="comment">
+                    <h1>Leave a comment</h1>
+                    <form name="submit-to-google-sheet">
+                        <div class="Name">
+                            <label class="formlabel">Name</label></br>
+                            <input class="nameinput" name="Name">
+                        </div>
+                        <div class="email">
+                            <label class="formlabel">Email address</label></br>
+                            <input class="emailinput" name="Email ID">
+                        </div>
+                        <div class="phone">
+                            <label class="formlabel">Phone no.</label></br>
+                            <input class="phoneinput" name="Phone No.">
+                            <div class="formtext">We'll never share your data with anyone else.</div>
+                        </div>
+                        <div class="message">
+                            <label class="formlabel">Leave a comment</label></br>
+                            <textarea class="messageinput" name="Message"></textarea>
+
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" class="checkinput">
+                            <label class="formlabel">Check me out</label>
+                        </div>
+                        <button type="submit" class="submitbtn">Submit</button>
+                    </form>
+                    <span id="respo"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwNYe6_aozIExS3YFhzrcBiacHhEsgkQqxQV8Nu2lJ38_XAURZblGfi0Y_bok6rdRRs_w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const messageResponse = document.getElementById("respo")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                messageResponse.innerHTML = "Message sent sucessfully"
+                setTimeout(function(){
+                    messageResponse.innerHTML = ""
+                }, 2000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>
